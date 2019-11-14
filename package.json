@@ -2,9 +2,13 @@
   "name": "@modelata/types-fire",
   "version": "3.0.0",
   "description": "Interfaces for modelata fire",
-  "main": "index.js",
+  "main": "dist/angular/index.js",
+  "types": "dist/angular/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "build:angular": "cpcli ./config/angular.exports.ts ./src/exports.ts && tsc",
+    "build:node": "cpcli ./config/node.exports.ts ./src/exports.ts && tsc",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -21,5 +25,14 @@
   "bugs": {
     "url": "https://github.com/Moventes/modelata-types-fire/issues"
   },
-  "homepage": "https://github.com/Moventes/modelata-types-fire#readme"
+  "homepage": "https://github.com/Moventes/modelata-types-fire#readme",
+  "devDependencies": {
+    "@firebase/firestore-types": "^1.7.0",
+    "@google-cloud/firestore": "^2.6.0",
+    "typescript": "^3.7.2",
+    "rxjs": "^6.5.3"
+  },
+  "peerDependencies": {
+    "rxjs": "^6.5.3"
+  }
 }
