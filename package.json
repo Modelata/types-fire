@@ -1,13 +1,17 @@
 {
   "name": "@modelata/types-fire",
-  "version": "3.0.0",
+  "version": "3.0.0-alpha1",
   "description": "Interfaces for modelata fire",
   "main": "dist/angular/index.js",
   "types": "dist/angular/index.d.ts",
+  "private": false,
   "scripts": {
-    "build": "tsc",
-    "build:angular": "cpcli ./config/angular.exports.ts ./src/exports.ts && tsc",
-    "build:node": "cpcli ./config/node.exports.ts ./src/exports.ts && tsc",
+    "prebuild": "rimraf ./dist",
+    "build": "npm run build:angular && npm run build:node",
+    "prebuild:angular": "cp-cli ./config/angular.exports.ts ./src/libs/exports.ts",
+    "build:angular": "tsc -p tsconfig.angular.json",
+    "prebuild:node": "cp-cli ./config/node.exports.ts ./src/libs/exports.ts",
+    "build:node": "tsc -p tsconfig.node.json",
     "prepublish": "npm run build"
   },
   "repository": {
@@ -27,12 +31,17 @@
   },
   "homepage": "https://github.com/Moventes/modelata-types-fire#readme",
   "devDependencies": {
+    "@firebase/app-types": "^0.4.7",
     "@firebase/firestore-types": "^1.7.0",
     "@google-cloud/firestore": "^2.6.0",
-    "typescript": "^3.7.2",
-    "rxjs": "^6.5.3"
+    "cp-cli": "^2.0.0",
+    "rxjs": "^6.5.3",
+    "typescript": "^3.7.2"
   },
   "peerDependencies": {
     "rxjs": "^6.5.3"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.0"
   }
 }
