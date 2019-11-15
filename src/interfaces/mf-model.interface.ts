@@ -6,5 +6,5 @@ export interface IMFModel {
   creationDate: Date;
   updateDate: Date;
 
-  initialize(data: Partial<this>, location: Partial<IMFLocation>): void;
+  initialize(data: Partial<this>, mustachePath: string, location: Partial<IMFLocation>): void;
 }

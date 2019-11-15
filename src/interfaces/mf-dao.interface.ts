@@ -6,7 +6,7 @@ import { IMFSaveOptions } from './mf-save-options.interface';
 import { DocumentReference, DocumentSnapshot, AsyncType } from '../specifics/exports';
 
 export interface IMFDao<M> {
-  collectionPath: string;
+  mustachePath: string;
 
   getNewModel(data?: Partial<M>, location?: Partial<IMFLocation>): M;
   getReference(location: string | IMFLocation): DocumentReference<M>;
