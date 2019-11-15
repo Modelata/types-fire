@@ -1,3 +1,3 @@
 export interface IMFFormOptions {
-  requiredFields?: string[],
+  requiredFields?: string[];
 }

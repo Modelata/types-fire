@@ -1,3 +1,3 @@
 export interface IMFFormBuilderData {
-  [key: string]: Array<any>,
+  [key: string]: any[];
 }

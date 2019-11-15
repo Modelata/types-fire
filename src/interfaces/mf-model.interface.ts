@@ -4,7 +4,7 @@ export interface IMFModel {
   _id: string;
   _collectionPath: string;
   creationDate: Date;
-  lastUpdateDate: Date;
+  updateDate: Date;
 
   initialize(data: Partial<this>, location: Partial<IMFLocation>): void;
 }

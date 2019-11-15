@@ -1,6 +1,6 @@
 {
   "name": "@modelata/types-fire",
-  "version": "3.0.0-alpha3",
+  "version": "3.0.0-alpha4",
   "description": "Interfaces for modelata fire",
   "main": "lib/angular/index.js",
   "types": "lib/angular/index.d.ts",
@@ -12,7 +12,8 @@
     "build:angular": "tsc -p tsconfig.angular.json",
     "prebuild:node": "cp-cli ./config/node.exports.ts ./src/specifics/exports.ts",
     "build:node": "tsc -p tsconfig.node.json",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "lint": "tslint -p tsconfig.angular.json -c tslint.json 'src/**/*.ts'"
   },
   "repository": {
     "type": "git",
@@ -35,15 +36,16 @@
     "@firebase/firestore-types": "^1.7.0",
     "@google-cloud/firestore": "^2.6.0",
     "cp-cli": "^2.0.0",
+    "rimraf": "^3.0.0",
     "rxjs": "~6.4.0",
-    "typescript": "^3.7.2",
-    "rimraf": "^3.0.0"
+    "tslint": "5.20.1",
+    "tslint-config-airbnb": "5.11.2",
+    "typescript": "^3.7.2"
   },
   "peerDependencies": {
     "@firebase/app-types": "^0.4.7",
     "@firebase/firestore-types": "^1.7.0",
     "@google-cloud/firestore": "^2.6.0",
     "rxjs": "~6.4.0"
-  },
-  "dependencies": {}
+  }
 }

@@ -6,4 +6,4 @@ import { Observable } from 'rxjs';
 export interface DocumentReference<M> extends FbDocumentReference { }
 export interface DocumentSnapshot<M> extends FbDocumentSnapshot { }
 
-export interface AsyncType<M> extends Observable<M> { };
+export interface AsyncType<M> extends Observable<M> { }
