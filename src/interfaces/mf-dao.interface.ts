@@ -10,13 +10,13 @@ export interface IMFDao<M> {
 
   getNewModel(data?: Partial<M>, location?: Partial<IMFLocation>): M;
   getReference(location: string | IMFLocation): DocumentReference<M>;
-  getById(location: string | IMFLocation, options?: IMFGetOneOptions): AsyncType<M>;
+  get(location: string | IMFLocation, options?: IMFGetOneOptions): AsyncType<M>;
   getByReference(reference: DocumentReference<M>, options?: IMFGetOneOptions): AsyncType<M>;
   getByPath(path: string, options?: IMFGetOneOptions): AsyncType<M>;
   getList(location?: Omit<IMFLocation, 'id'>, options?: IMFGetListOptions): AsyncType<M[]>;
   create(data: Partial<M>, location?: string | IMFLocation, options?: IMFSaveOptions): Promise<M>;
   update(data: Partial<M>, location?: string | IMFLocation, options?: IMFSaveOptions): Promise<M>;
-  delete(id: string): Promise<void>;
+  delete(location: string | IMFLocation): Promise<void>;
   getModelFromSnapshot(snapshot: DocumentSnapshot<M>): M;
   getSnapshotFromId(id: string): AsyncType<DocumentSnapshot<M>>;
   beforeSave(model: Partial<M>): Promise<Partial<M>>;
