@@ -1,6 +1,6 @@
-import { WhereFilterOp } from '../libs/exports';
+import { WhereFilterOp } from '../specifics/exports';
 
-export interface MFWhere {
+export interface IMFWhere {
   field: string;
   operator: WhereFilterOp;
   value: any;

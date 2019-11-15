@@ -1,3 +1,3 @@
-export interface MFFormOptions {
+export interface IMFFormOptions {
   requiredFields?: string[],
 }

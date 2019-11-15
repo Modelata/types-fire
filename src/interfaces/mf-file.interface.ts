@@ -1,4 +1,4 @@
-export interface MFFile {
+export interface IMFFile {
   name: string,
   type: string,
   contentLastModificationDate: Date,

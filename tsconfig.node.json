@@ -4,7 +4,7 @@
     "module": "commonjs",
     "declaration": true,
     "strict": true,
-    "outDir": "./dist/node",
+    "outDir": "./lib/node",
     "baseUrl": "./src"
   },
   "include": [

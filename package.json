@@ -1,16 +1,16 @@
 {
   "name": "@modelata/types-fire",
-  "version": "3.0.0-alpha1",
+  "version": "3.0.0-alpha3",
   "description": "Interfaces for modelata fire",
-  "main": "dist/angular/index.js",
-  "types": "dist/angular/index.d.ts",
+  "main": "lib/angular/index.js",
+  "types": "lib/angular/index.d.ts",
   "private": false,
   "scripts": {
-    "prebuild": "rimraf ./dist",
+    "prebuild": "rimraf ./lib",
     "build": "npm run build:angular && npm run build:node",
-    "prebuild:angular": "cp-cli ./config/angular.exports.ts ./src/libs/exports.ts",
+    "prebuild:angular": "cp-cli ./config/angular.exports.ts ./src/specifics/exports.ts",
     "build:angular": "tsc -p tsconfig.angular.json",
-    "prebuild:node": "cp-cli ./config/node.exports.ts ./src/libs/exports.ts",
+    "prebuild:node": "cp-cli ./config/node.exports.ts ./src/specifics/exports.ts",
     "build:node": "tsc -p tsconfig.node.json",
     "prepublish": "npm run build"
   },
@@ -35,13 +35,15 @@
     "@firebase/firestore-types": "^1.7.0",
     "@google-cloud/firestore": "^2.6.0",
     "cp-cli": "^2.0.0",
-    "rxjs": "^6.5.3",
-    "typescript": "^3.7.2"
+    "rxjs": "~6.4.0",
+    "typescript": "^3.7.2",
+    "rimraf": "^3.0.0"
   },
   "peerDependencies": {
-    "rxjs": "^6.5.3"
+    "@firebase/app-types": "^0.4.7",
+    "@firebase/firestore-types": "^1.7.0",
+    "@google-cloud/firestore": "^2.6.0",
+    "rxjs": "~6.4.0"
   },
-  "dependencies": {
-    "rimraf": "^3.0.0"
-  }
+  "dependencies": {}
 }

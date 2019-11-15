@@ -1,12 +1,12 @@
-import { MFWhere } from './mf-where.interface';
-import { MFOrderBy } from './mf-order-by.interface';
-import { MFOffset } from './mf-offset.interface';
+import { IMFWhere } from './mf-where.interface';
+import { IMFOrderBy } from './mf-order-by.interface';
+import { IMFOffset } from './mf-offset.interface';
 
-export interface MFGetListOptions {
+export interface IMFGetListOptions {
   completeOnFirst: boolean,
-  where: MFWhere[],
-  orderBy: MFOrderBy,
+  where: IMFWhere[],
+  orderBy: IMFOrderBy,
   limit: number,
-  offset: MFOffset,
+  offset: IMFOffset,
   cacheable: boolean,
 }

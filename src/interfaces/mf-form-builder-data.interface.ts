@@ -1,3 +1,3 @@
-export interface MFFormBuilderData {
+export interface IMFFormBuilderData {
   [key: string]: Array<any>,
 }

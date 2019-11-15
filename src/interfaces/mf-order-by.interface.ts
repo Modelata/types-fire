@@ -1,6 +1,6 @@
-import { OrderByDirection } from '../libs/exports';
+import { OrderByDirection } from '../specifics/exports';
 
-export interface MFOrderBy {
+export interface IMFOrderBy {
   field: string;
   operator: OrderByDirection;
 }

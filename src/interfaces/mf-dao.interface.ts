@@ -1,24 +1,24 @@
-import { MFLocation } from './mf-location.interface';
-import { MFGetOneOptions } from './mf-get-one-options.interface';
-import { MFGetListOptions } from './mf-get-list-options.interface';
-import { MFFile } from './mf-file.interface';
-import { MFSaveOptions } from './mf-save-options.interface';
-import { DocumentReference, DocumentSnapshot, AsyncType } from '../libs/exports';
+import { IMFLocation } from './mf-location.interface';
+import { IMFGetOneOptions } from './mf-get-one-options.interface';
+import { IMFGetListOptions } from './mf-get-list-options.interface';
+import { IMFFile } from './mf-file.interface';
+import { IMFSaveOptions } from './mf-save-options.interface';
+import { DocumentReference, DocumentSnapshot, AsyncType } from '../specifics/exports';
 
-export interface MFDaoInterface<M> {
+export interface IMFDao<M> {
   collectionPath: string;
 
-  getNewModel(data?: Partial<M>, location?: Partial<MFLocation>): M;
-  getReference(location: string | MFLocation): DocumentReference<M>;
-  getById(location: string | MFLocation, options?: MFGetOneOptions): AsyncType<M>;
-  getByReference(reference: DocumentReference<M>, options?: MFGetOneOptions): AsyncType<M>;
-  getByPath(path: string, options?: MFGetOneOptions): AsyncType<M>;
-  getList(location?: Omit<MFLocation, 'id'>, options?: MFGetListOptions): AsyncType<M[]>;
-  create(data: Partial<M>, location?: string | MFLocation, options?: MFSaveOptions): Promise<M>;
-  update(data: Partial<M>, location?: string | MFLocation, options?: MFSaveOptions): Promise<M>;
+  getNewModel(data?: Partial<M>, location?: Partial<IMFLocation>): M;
+  getReference(location: string | IMFLocation): DocumentReference<M>;
+  getById(location: string | IMFLocation, options?: IMFGetOneOptions): AsyncType<M>;
+  getByReference(reference: DocumentReference<M>, options?: IMFGetOneOptions): AsyncType<M>;
+  getByPath(path: string, options?: IMFGetOneOptions): AsyncType<M>;
+  getList(location?: Omit<IMFLocation, 'id'>, options?: IMFGetListOptions): AsyncType<M[]>;
+  create(data: Partial<M>, location?: string | IMFLocation, options?: IMFSaveOptions): Promise<M>;
+  update(data: Partial<M>, location?: string | IMFLocation, options?: IMFSaveOptions): Promise<M>;
   delete(id: string): Promise<void>;
   getModelFromSnapshot(snapshot: DocumentSnapshot<M>): M;
   getSnapshotFromId(id: string): AsyncType<DocumentSnapshot<M>>;
   beforeSave(model: Partial<M>): Promise<Partial<M>>;
-  saveFile(fileObject: MFFile, location: string | MFLocation): MFFile;
+  saveFile(fileObject: IMFFile, location: string | IMFLocation): IMFFile;
 }

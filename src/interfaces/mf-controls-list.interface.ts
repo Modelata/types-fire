@@ -1,3 +1,3 @@
-export interface MFControlsList {
+export interface IMFControlsList {
   [attribute: string]: true,
 }

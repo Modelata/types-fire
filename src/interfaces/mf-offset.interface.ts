@@ -1,4 +1,4 @@
-export interface MFOffset {
+export interface IMFOffset {
   startAt?: string;
   startAfter?: string;
   endAt?: string;

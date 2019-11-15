@@ -1,3 +1,3 @@
-export interface MFSaveOptions {
+export interface IMFSaveOptions {
   overwrite: boolean,
 }

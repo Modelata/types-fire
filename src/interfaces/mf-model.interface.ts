@@ -1,10 +1,10 @@
-import { MFLocation } from './mf-location.interface';
+import { IMFLocation } from './mf-location.interface';
 
-export interface MFModelInterface<M> {
+export interface IMFModel {
   _id: string;
   _collectionPath: string;
   creationDate: Date;
   lastUpdateDate: Date;
 
-  initialize(data: Partial<M>, location: Partial<MFLocation>): void;
+  initialize(data: Partial<this>, location: Partial<IMFLocation>): void;
 }
