@@ -6,6 +6,12 @@
     "deprecation": {
       "severity": "warning"
     },
+    "function-name": [
+      true,
+      {
+        "function-regex": "^[a-zA-Z$][\\w\\d]+$"
+      }
+    ],
     "import-blacklist": [
       true,
       "rxjs/Rx"
