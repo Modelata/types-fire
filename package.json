@@ -40,12 +40,14 @@
     "rxjs": "~6.4.0",
     "tslint": "5.20.1",
     "tslint-config-airbnb": "5.11.2",
-    "typescript": "^3.7.2"
+    "typescript": "^3.7.2",
+    "firebase": "^7.4.0"
   },
   "peerDependencies": {
     "@firebase/app-types": "^0.4.7",
     "@firebase/firestore-types": "^1.7.0",
     "@google-cloud/firestore": "^2.6.0",
-    "rxjs": "~6.4.0"
+    "rxjs": "~6.4.0",
+    "firebase": "^7.4.0"
   }
 }
