@@ -1,6 +1,6 @@
 {
   "name": "@modelata/types-fire",
-  "version": "3.0.0-alpha9",
+  "version": "3.0.0-alpha11",
   "description": "Interfaces for modelata fire",
   "main": "lib/angular/index.js",
   "types": "lib/angular/index.d.ts",
@@ -32,8 +32,6 @@
   },
   "homepage": "https://github.com/Moventes/modelata-types-fire#readme",
   "devDependencies": {
-    "@firebase/app-types": "^0.4.7",
-    "@firebase/firestore-types": "^1.7.0",
     "@google-cloud/firestore": "^2.6.0",
     "cp-cli": "^2.0.0",
     "rimraf": "^3.0.0",
@@ -44,8 +42,6 @@
     "firebase": "^7.4.0"
   },
   "peerDependencies": {
-    "@firebase/app-types": "^0.4.7",
-    "@firebase/firestore-types": "^1.7.0",
     "@google-cloud/firestore": "^2.6.0",
     "rxjs": "~6.4.0",
     "firebase": "^7.4.0"

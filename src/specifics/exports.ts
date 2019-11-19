@@ -6,8 +6,8 @@ import {
 
 export { WhereFilterOp, OrderByDirection } from '@google-cloud/firestore';
 
-export interface CollectionReference<M> extends GcCollectionReference { }
-export interface DocumentReference<M> extends GcDocumentReference { }
-export interface DocumentSnapshot<M> extends GcDocumentSnapshot { }
+export declare type CollectionReference<M> = GcCollectionReference;
+export declare type DocumentReference<M> = GcDocumentReference;
+export declare type DocumentSnapshot<M> = GcDocumentSnapshot;
 
-export interface AsyncType<M> extends Promise<M> { }
+export declare type AsyncType<M> = Promise<M>;

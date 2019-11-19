@@ -1,4 +1,4 @@
 export interface IMFGetOneOptions {
-  completeOnFirst: boolean;
-  cacheable: boolean;
+  completeOnFirst?: boolean;
+  cacheable?: boolean;
 }
