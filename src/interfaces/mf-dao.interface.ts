@@ -1,9 +1,9 @@
-import { IMFLocation } from './mf-location.interface';
-import { IMFGetOneOptions } from './mf-get-one-options.interface';
-import { IMFGetListOptions } from './mf-get-list-options.interface';
+import { AsyncType, CollectionReference, DocumentReference, DocumentSnapshot } from '../specifics/exports';
 import { IMFFile } from './mf-file.interface';
+import { IMFGetListOptions } from './mf-get-list-options.interface';
+import { IMFGetOneOptions } from './mf-get-one-options.interface';
+import { IMFLocation } from './mf-location.interface';
 import { IMFSaveOptions } from './mf-save-options.interface';
-import { DocumentReference, DocumentSnapshot, AsyncType, CollectionReference } from '../specifics/exports';
 
 export interface IMFDao<M> {
   mustachePath: string;
@@ -18,7 +18,7 @@ export interface IMFDao<M> {
   update(data: Partial<M>, location?: string | IMFLocation, options?: IMFSaveOptions): Promise<Partial<M>>;
   delete(location: string | IMFLocation): Promise<void>;
   getModelFromSnapshot(snapshot: DocumentSnapshot<M>): M;
-  getSnapshot(location: string | IMFLocation): AsyncType<DocumentSnapshot<M>>;
+  getSnapshot(location: string | IMFLocation, options?: IMFGetOneOptions): AsyncType<DocumentSnapshot<M>>;
   beforeSave(model: Partial<M>): Promise<Partial<M>>;
   saveFile(fileObject: IMFFile, location: string | IMFLocation): IMFFile;
 }
