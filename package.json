@@ -1,6 +1,6 @@
 {
   "name": "@modelata/types-fire",
-  "version": "3.0.0-alpha7",
+  "version": "3.0.0-alpha9",
   "description": "Interfaces for modelata fire",
   "main": "lib/angular/index.js",
   "types": "lib/angular/index.d.ts",
