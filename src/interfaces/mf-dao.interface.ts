@@ -15,7 +15,7 @@ export interface IMFDao<M> {
   get(location: string | IMFLocation, options?: IMFGetOneOptions): AsyncType<M>;
   getByReference(reference: DocumentReference<M>, options?: IMFGetOneOptions): AsyncType<M>;
   getByPath(path: string, options?: IMFGetOneOptions): AsyncType<M>;
-  getList(location?: MFOmit<IMFLocation, 'id'>, options?: IMFGetListOptions): AsyncType<M[]>;
+  getList(location?: MFOmit<IMFLocation, 'id'>, options?: IMFGetListOptions<M>): AsyncType<M[]>;
   create(data: M, location?: string | IMFLocation, options?: IMFSaveOptions): Promise<M>;
   update(data: Partial<M>, location?: string | IMFLocation, options?: IMFSaveOptions): Promise<Partial<M>>;
   delete(location: string | IMFLocation): Promise<void>;
