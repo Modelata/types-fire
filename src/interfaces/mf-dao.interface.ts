@@ -5,6 +5,8 @@ import { IMFGetOneOptions } from './mf-get-one-options.interface';
 import { IMFLocation } from './mf-location.interface';
 import { IMFSaveOptions } from './mf-save-options.interface';
 
+export type MFOmit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
+
 export interface IMFDao<M> {
   mustachePath: string;
 
@@ -13,7 +15,7 @@ export interface IMFDao<M> {
   get(location: string | IMFLocation, options?: IMFGetOneOptions): AsyncType<M>;
   getByReference(reference: DocumentReference<M>, options?: IMFGetOneOptions): AsyncType<M>;
   getByPath(path: string, options?: IMFGetOneOptions): AsyncType<M>;
-  getList(location?: Omit<IMFLocation, 'id'>, options?: IMFGetListOptions): AsyncType<M[]>;
+  getList(location?: MFOmit<IMFLocation, 'id'>, options?: IMFGetListOptions): AsyncType<M[]>;
   create(data: M, location?: string | IMFLocation, options?: IMFSaveOptions): Promise<M>;
   update(data: Partial<M>, location?: string | IMFLocation, options?: IMFSaveOptions): Promise<Partial<M>>;
   delete(location: string | IMFLocation): Promise<void>;
