@@ -22,5 +22,5 @@ export interface IMFDao<M> {
   getModelFromSnapshot(snapshot: DocumentSnapshot<M>): M;
   getSnapshot(location: string | IMFLocation, options?: IMFGetOneOptions): AsyncType<DocumentSnapshot<M>>;
   beforeSave(model: Partial<M>): Promise<Partial<M>>;
-  saveFile(fileObject: IMFFile, location: string | IMFLocation): IMFFile;
+  saveFile(fileObject: IMFFile, location: string | IMFLocation): AsyncType<IMFFile>;
 }
