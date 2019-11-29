@@ -1,8 +1,8 @@
 export interface IMFFile {
-  name: string;
-  type: string;
-  contentLastModificationDate: Date;
+  name?: string;
+  type?: string;
+  contentLastModificationDate?: Date;
   url?: string;
-  storageReference: any;
+  storagePath?: string;
   _file?: File;
 }
