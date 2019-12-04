@@ -1,12 +1,13 @@
 {
   "name": "@modelata/types-fire",
-  "version": "3.0.1-dev1",
+  "version": "3.0.1-dev2",
   "description": "Interfaces for modelata fire",
   "main": "lib/angular/index.js",
   "types": "lib/angular/index.d.ts",
   "private": false,
   "scripts": {
-    "prebuild": "rimraf ./lib",
+    "delete-lib-folder": "rimraf ./lib",
+    "prebuild": "npm run lint && npm run delete-lib-folder",
     "build": "npm run build:angular && npm run build:node",
     "prebuild:angular": "cp-cli ./config/angular.exports.ts ./src/specifics/exports.ts",
     "build:angular": "tsc -p tsconfig.angular.json",

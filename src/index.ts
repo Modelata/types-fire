@@ -11,3 +11,4 @@ export * from './interfaces/mf-offset.interface';
 export * from './interfaces/mf-order-by.interface';
 export * from './interfaces/mf-save-options.interface';
 export * from './interfaces/mf-where.interface';
+export * from './interfaces/mf-storage-options.interface';
