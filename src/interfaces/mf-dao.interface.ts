@@ -7,8 +7,8 @@ import { IMFSaveOptions } from './mf-save-options.interface';
 import { IMFUpdateOptions } from './mf-update-options.interface';
 import { IMFModel } from './mf-model.interface';
 import { IMFDeleteOptions } from './mf-delete-options.interface';
+import { MFOmit } from './toolType';
 
-export type MFOmit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
 export interface IMFDao<M extends IMFModel<M>> {
   mustachePath: string;

@@ -14,3 +14,4 @@ export * from './interfaces/mf-where.interface';
 export * from './interfaces/mf-storage-options.interface';
 export * from './interfaces/mf-update-options.interface';
 export * from './interfaces/mf-delete-options.interface';
+export * from './interfaces/toolType';
