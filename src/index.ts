@@ -12,3 +12,5 @@ export * from './interfaces/mf-order-by.interface';
 export * from './interfaces/mf-save-options.interface';
 export * from './interfaces/mf-where.interface';
 export * from './interfaces/mf-storage-options.interface';
+export * from './interfaces/mf-update-options.interface';
+export * from './interfaces/mf-delete-options.interface';
