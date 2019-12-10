@@ -13,4 +13,9 @@ export interface IMFGetOneOptions {
    * Request result will be cached in order to get a faster answer on same getOne request
    */
   cacheable?: boolean;
+
+  /**
+   * Display an error in console when requested document not exists (default: true)
+   */
+  warnOnMissing?: boolean;
 }
