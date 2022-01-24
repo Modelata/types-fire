@@ -1,4 +1,4 @@
-import {
+import { 
   DocumentReference as GcDocumentReference,
   DocumentSnapshot as GcDocumentSnapshot,
   CollectionReference as GcCollectionReference
