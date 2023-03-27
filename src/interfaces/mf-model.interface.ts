@@ -1,7 +1,7 @@
 import { IMFLocation } from './mf-location.interface';
-import { DocumentSnapshot } from '../specifics/exports';
+import { DocumentData, DocumentSnapshot } from '../specifics/exports';
 
-export interface IMFModel<M> {
+export interface IMFModel<M extends DocumentData> {
   /**
    * Document Id
    */
